@@ -1,0 +1,66 @@
+extends main
+block titles
+	title 添加随笔
+block links
+	link(rel="stylesheet", href="../css/articles_add.css")
+block scripts
+	script(src="../kindeditor/kindeditor-min.js")
+	script(src="../kindeditor/lang/zh_CN.js")
+	script(src="../js/articles_add.js")
+
+block contents
+	form(action="/admin/add",method="post")
+		div.alert-style.alert.alert-success(role="alert") 添加随笔
+		div.form-content
+			//- 标题
+			div.input-group
+				span#basic-addon1.input-group-addon 标题
+				input.form-control(type="text",name="title",aria-describedby="basic-addon1")
+			//- 文章内容
+			div.form-text
+				textarea#addTextArea(name="content",rows="18")
+			//- 文章标签
+			div.form-tags.panel.panel-info
+				div.panel-heading
+					span.panel-title 文章标签
+				div.panel-body
+					li
+						input(type="radio" name="tags" value="HTML") 
+						apan.tags-span HTML
+					li
+						input(type="radio" name="tags" value="JavaScript") 
+						span.tags-span JavaScript
+					li
+						input(type="radio" name="tags" value="CSS") 
+						span.tags-span CSS
+					li
+						input(type="radio" name="tags" value="VueJs") 
+						span.tags-span VueJs
+					li
+						input(type="radio" name="tags" value="NodeJs") 
+						span.tags-span NodeJs
+					li
+						input(type="radio" name="tags" value="Express") 
+						span.tags-span Express
+					li
+						input(type="radio" name="tags" value="MongoDB") 
+						span.tags-span MongoDB
+					li
+						input(type="radio" name="tags" value="Linux") 
+						span.tags-span Linux
+			//- 发表
+			input.btn.btn-info(type="submit")
+			div.tips
+				if error
+					div.alert.alert-warning(role="alert") 
+						span.glyphicon.glyphicon-alert &nbsp;
+						| #{error}
+				if success
+					div.alert.alert-warning(role="alert") 
+						span.glyphicon.glyphicon-alert &nbsp;
+						| #{success}
+					
+
+
+
+

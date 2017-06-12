@@ -1,0 +1,47 @@
+extends main
+block titles
+	title 修改随笔
+block links
+	link(rel="stylesheet", href="../css/articles_editor.css")
+block scripts
+	script(src="../kindeditor/kindeditor-min.js")
+	script(src="../kindeditor/lang/zh_CN.js")
+	script(src="../js/articles_editor.js")
+
+block contents
+	form(action="/admin/update",method="post")
+		div.alert-style.alert.alert-success(role="alert") 修改随笔
+		div.form-content
+			//- 文章_id
+			div#_id
+				input(type="text",name="_id",value=data._id)
+			//- 标题
+			div.input-group
+				span#basic-addon1.input-group-addon 标题
+				input.form-control(type="text",name="title",aria-describedby="basic-addon1",value=data.title)
+			//- 文章内容
+			div.form-text
+				textarea#editorTextArea(name="content",rows="18") #{data.content}
+			//- 文章标签
+			div.form-tags.panel.panel-info
+				div.panel-heading
+					span.panel-title 文章标签
+				div.panel-body
+					- var arr = ['HTML','JavaScript','CSS','VueJs','NodeJs','Express','MongoDB','Linux'];
+					each val in arr
+						- if(val == data.tags)
+							li
+								input(type="radio",name="tags",value=val,checked) 
+								apan.tags-span= val
+						- else
+							li
+								input(type="radio",name="tags",value=val) 
+								apan.tags-span= val		 
+					
+			//- 发表
+			input.btn.btn-info(type="submit")
+					
+
+
+
+

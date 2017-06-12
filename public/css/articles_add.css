@@ -1,0 +1,46 @@
+form{
+	position: relative;
+}
+.alert-style{
+	padding:10px;
+	border-radius: 0px;
+	letter-spacing: 5px;
+}
+.form-content{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.form-text{
+	margin-top:15px;
+}
+#addTextArea{
+	/*width:100%;*/
+}
+.form-tags{
+	margin-top: 15px;
+}
+.form-tags > .panel-heading{
+	height: 34px;
+	line-height: 34px;
+	padding: 0px 0px 0px 12px;
+	background-color: #eee;
+}
+.tags-span{
+	margin:0px 15px 0px 5px;
+}
+.panel-body li{
+	list-style: none;
+	padding:0px;
+	display: inline-block;
+}
+.tips{
+	display: inline-block;
+}
+.tips .alert{
+	width:250px;
+	height: 34px;
+	line-height: 34px;
+	padding: 0;
+	margin:0 20px;
+	text-align: center;
+}

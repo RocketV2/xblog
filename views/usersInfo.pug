@@ -1,0 +1,37 @@
+extends main
+
+block titles
+	title 用户信息
+block links
+	link(rel="stylesheet", href="../css/usersInfo.css")
+block scripts
+	script(src="../js/usersInfo.js")
+
+block contents
+	div.alert-style.alert.alert-success(role="alert") 用户信息
+	div.banner
+		span 修改密码
+	form(action="/admin/user",method="post")
+		div.form-group
+			label.label-style(for="") 用户名
+			input.form-style.form-control(type="text",name="name",placeholder="用户名")
+		div.form-group
+			label.label-style(for="") 原始密码
+			input.form-style.form-control(type="password",name="oldpassword",placeholder="原始密码")
+		div.form-group
+			label.label-style(for="") 新密码
+			input.form-style.form-control(type="password",name="newpassword",placeholder="新密码")
+		div.form-group
+			label.label-style(for="") 重新输入新密码
+			input.form-style.form-control(type="password",name="twicepassword",placeholder="重新输入新密码")
+		div.form-group
+			input.form-sub.btn.btn-default(type="submit",value="确认")
+			div.tips
+				if error
+					div.alert.alert-warning(role="alert") 
+						span.glyphicon.glyphicon-alert &nbsp;
+						| #{error}
+				if success
+					div.alert.alert-warning(role="alert") 
+						span.glyphicon.glyphicon-alert &nbsp;
+						| #{success}

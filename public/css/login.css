@@ -1,0 +1,84 @@
+html,body{
+	margin:0;
+	padding: 0;
+}
+body{
+	background-color: #afbb73;
+}
+#mian{
+	
+}
+div.banner{
+	width:500px;
+	height: 60px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 170px;
+	font-size: 28px;
+	letter-spacing: 5px;
+	line-height: 60px;
+	text-align: center;
+}
+/*表单样式*/
+form{
+	width:500px;
+	height: 230px;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 30px 70px 30px 60px;
+	/*border: 1px black solid;
+	border-radius: 5px;*/
+}
+div.form-group{
+	width:500px;
+	margin-bottom: 25px;
+}
+label.label-style{
+	width:70px;
+}
+input.form-style{
+	display: inline-block;
+	width:300px;
+}
+.form-sub{
+	margin-left: 70px;
+	margin-right: 40px;
+	display: inline-block;
+}
+#tips{
+	display: inline-block;
+}
+#tips .alert{
+	width:200px;
+	height: 34px;
+	line-height: 34px;
+	padding: 0;
+	margin:0;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

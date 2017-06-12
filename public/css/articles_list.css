@@ -1,0 +1,50 @@
+
+.alert-style{
+	border-radius: 0px;
+	padding: 10px;
+	letter-spacing: 5px;
+}
+.table{
+	font-size: 14px;
+	font-weight: normal;
+}
+.table>thead>tr>th.table-num{
+	width:90px;
+	padding-left: 20px;
+}
+.table>tbody>tr>th.table-num{
+	width:80px;
+	padding-left: 20px;
+}
+.operation{
+	width:90px;
+}
+table > tbody > tr > th a:hover{
+	text-decoration: none;
+}
+.page-style{
+	position: relative;
+}
+.page-ul-style{
+	position: absolute;
+	right: 30px;
+}
+#totalPages{
+	display: none;
+}
+#curPage{
+	display: none;
+}
+.articles-editor-a,.articles-delete-li{
+	color:black;
+} 
+.articles-editor-a:hover{
+	color:#f0ad4e;
+} 
+.articles-delete-li:hover{
+	color:#f0ad4e;
+} 
+.articles-delete-li{
+	list-style: none;
+	padding: 0;
+}

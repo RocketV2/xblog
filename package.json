@@ -1,0 +1,41 @@
+{
+  "name": "xblog",
+  "version": "1.0.0",
+  "description": "create a technology blog personally ",
+  "main": "app.js",
+  "scripts": {
+    "test": "xblog",
+    "app": "supervisor app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RocketV2/xblog.git"
+  },
+  "keywords": [
+    "xblog",
+    "express",
+    "mongodb",
+    "vuejs",
+    "webpack"
+  ],
+  "author": "xubiao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RocketV2/xblog/issues"
+  },
+  "homepage": "https://github.com/RocketV2/xblog#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "connect-flash": "^0.1.1",
+    "connect-flash-plus": "^0.2.1",
+    "connect-mongo": "^1.3.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.3",
+    "express-session": "^1.15.3",
+    "mongodb": "^2.2.28",
+    "pug": "^2.0.0-rc.2"
+  },
+  "devDependencies": {
+    "supervisor": "^0.12.0"
+  }
+}

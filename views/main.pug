@@ -1,0 +1,107 @@
+html
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible",content="IE=edge,chrome=1")
+		meta(name="viewport",content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no")
+		block titles
+		link(rel="shortcut icon",href="/images/favicon.ico",type="image/x-icon")
+		link(rel="stylesheet", href="/bootstrap/css/bootstrap.min.css")
+		link(rel="stylesheet", href="/css/main.css")
+		script(src="/common/jquery.min.js")
+		script(src="/bootstrap/js/bootstrap.min.js")
+		//- 定义继承模块 block
+		block links
+		block scripts
+	body
+		//- 头部区域
+		div.header
+			div.header-title
+				span XBLOG 管理
+			div.header-info
+					span 管理员
+					div#infoDown.info-down
+						div
+							span admin&nbsp;
+							span.glyphicon.glyphicon-menu-down
+						ul#infoUser.info-down-ul
+							li.info-li
+								a(href="/admin/user") 个人信息
+							li.info-li
+								a(href="/admin/logout") 登出
+		//- 左侧导航
+		div.asider
+			ul.asider-ul
+				li.asider-li 
+					span.glyphicon.glyphicon-list-alt &nbsp;
+					a(href="/admin/list") 文章列表
+				li.asider-li 
+					span.glyphicon.glyphicon-pencil &nbsp;
+					a(href="/admin/add") 添加随笔
+				li.asider-li 
+					span.glyphicon.glyphicon-user &nbsp;
+					a(href="/admin/user") 用户信息
+				li.asider-li 
+					span.glyphicon.glyphicon-star &nbsp;
+					a(href="/admin/visit") 访问统计
+				li.asider-li 
+					span.glyphicon.glyphicon-globe &nbsp;
+					| 日志信息
+		//- 内容区域
+		div.content
+			div.content-title
+				div.content-title-mark
+					span.glyphicon.glyphicon-home
+					span &nbsp;首页
+			div.content-body
+				//- 定义继承模块 block
+				block contents
+		
+			div.content-foot
+				
+		//- 蒙层 
+		div#mask
+			div.mask-panel-style.panel
+				div.panel-heading
+					h3.panel-title
+						span.glyphicon.glyphicon-warning-sign &nbsp;
+						|Warning
+				div.panel-body
+					div.mask-panel-tip 确定删除此选择吗？
+					div.mask-panel-btn
+						button#mask-cancle.btn.btn-primary 取消
+						button#mask-comfirm.btn.btn-success 确定
+
+		script(src="../js/main.js")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

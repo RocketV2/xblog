@@ -1,0 +1,17 @@
+.alert-style{
+	border-radius: 0px;
+	padding: 10px;
+	letter-spacing: 1px;
+}
+#pv-likes-sort{
+	width:800px;
+	height:400px;
+	margin:0 auto;
+	margin-bottom: 50px;
+}
+#pv-watch{
+	/*width:800px;*/
+	height:400px;
+	margin:0 auto;
+	margin-bottom: 100px;
+}

@@ -1,0 +1,172 @@
+body {
+    min-height: 100%;
+    position: relative;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+}
+.header{
+	width:100%;
+	height:45px;
+	background-color: #222222;
+	color: #fff;
+}
+.header-title{
+	width:200px;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	font-size: 18px;
+}
+.header-info{
+	width:200px;
+	height: 45px;
+	line-height: 45px;
+	position: absolute;
+	right: 0px;
+	top:0px;
+	border: 1px solid black;
+}
+.info-down{
+	width: 100px;
+	z-index: 999;
+	position: absolute;
+	left:45px;
+	top:0px;
+	font-size: 15px;
+	text-align: center;
+}
+.info-down-ul{
+	margin:0px;
+	padding:0px;
+	border: 1px solid #dcd7d7;
+	border-radius: 0 0 5px 5px;
+	display: none;
+}
+.info-li{
+	height: 35px;
+	border-bottom:1px solid #dcd7d7;
+	line-height: 35px;
+	list-style: none;
+}
+li.info-li:hover{
+	background-color: #eee;
+}
+.info-li > a{
+	text-decoration: none;
+}
+
+
+/*侧边栏样式*/
+.asider{
+	position:absolute;
+	top:45px;
+	bottom:0px;
+	left:0px;
+	width:200px;
+	background-color: #eee;
+}
+.asider-ul{
+	margin:10px 0px 0px 0px;
+	padding:0px;
+}
+.asider-li{
+	height:36px;
+	padding-right: 50px;
+	font-size: 14px;
+	line-height: 36px;
+	border-bottom: 1px solid #dcd7d7;
+	text-align: center;
+
+}
+.asider-li > a{
+	text-decoration: none;
+}
+/*中间主体部分*/
+.content{
+	position: absolute;
+	top:45px;
+	right:0px;
+	left:200px;
+	bottom:0px;
+	overflow: scroll;
+}
+.content-title{
+	height: 38px;
+	background-color: #f5f5f5;
+}
+.content-title-mark{
+	line-height: 38px;
+	height: 38px;
+	margin-left: 15px;
+}
+.content-body{
+	position: relative;
+}
+
+
+/*蒙层*/
+#mask{
+	position: absolute;
+	top:0px;
+	right:0px;
+	bottom:0px;
+	left:0px;
+	background-color: #eee;
+	z-index: 999;
+	opacity: 0.65;
+	display: none;
+}
+.mask-panel-style{
+	margin:250px auto;
+	width:350px;
+	height: 200px;
+	background-color: #000;
+	color:#fff;
+}
+.mask-panel-tip{
+	width:350px;
+	height: 85px;
+	line-height: 85px;
+	text-align: center;
+	letter-spacing: 3px;
+	font-size: 16px;
+}
+.mask-panel-btn{
+	text-align: center;
+}
+.mask-panel-btn button{
+	margin:5px 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

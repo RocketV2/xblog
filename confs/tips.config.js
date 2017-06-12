@@ -1,0 +1,33 @@
+/**
+ * 用于提示的中文
+ */
+module.exports = {
+	login_success:"登录成功！",
+	login_error:"登录失败！",
+	login_empty:"用户名／密码不能为空!",
+	login_status:"登录状态！",
+	login_not_match:"用户名／密码不匹配！",
+	logout_success:"登出成功！",
+	logout_status:"未登录／登出状态！",
+	db_error:"数据库连接／查询等操作失败！",
+	add_error:"随笔添加失败！",
+	add_empty:"标题／内容／标签不能为空！",
+	add_success:"随笔添加成功！",
+	list_error:"随笔列表查找错误！",
+	list_pagesOut:"无任何随笔数据！",
+	editor_error:"所编辑的随笔未找到！",
+	editor_success:"编辑成功！",
+	update_success:"随笔更新成功！",
+	update_error:"随笔更新失败！",
+	delete_error:"删除随笔失败！",
+	delete_success:"删除随笔成功！",
+	changeUserInfo_error_empty:"用户名／密码不能为空！",
+	changeUserInfo_error_twice:"重新输入密码与新密码不匹配！",
+	changeUserInfo_success:"用户信息更新成功！",
+	db_connect_err:"数据库连接失败！",
+	db_find_err:"数据库查询失败！",
+	db_update_err:"数据库更新失败！",
+	db_userinfo_err:"用户原始信息错误！",
+	success:"成功",
+	error:"错误",
+};

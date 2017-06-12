@@ -1,0 +1,3 @@
+$(function(){
+	$('#parallax').jparallax({});
+});

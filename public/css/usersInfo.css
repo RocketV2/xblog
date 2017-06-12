@@ -1,0 +1,43 @@
+.alert-style{
+	padding:10px;
+	border-radius: 0px;
+	letter-spacing: 5px;
+}
+
+div.banner{
+	padding-left: 20px;
+	padding-bottom: 30px;
+}
+/*表单样式*/
+form{
+	width:500px;
+	height: 230px;
+	margin-top: 0px;
+	margin-left: 20px;
+}
+div.form-group{
+	width:500px;
+	margin-bottom: 25px;
+}
+label.label-style{
+	width:120px;
+}
+input.form-style{
+	display: inline-block;
+	width:300px;
+}
+.form-sub{
+	margin-left: 120px;
+	display: inline-block;
+}
+.tips{
+	display: inline-block;
+}
+.tips .alert{
+	width:250px;
+	height: 34px;
+	line-height: 34px;
+	padding: 0;
+	margin-left: 20px;
+	text-align: center;
+}
