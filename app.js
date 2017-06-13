@@ -13,6 +13,8 @@
  * 			    后者连接mongo数据库，将session自动保存在数据库中
  * 			3.2 在使用connect-mongo连接数据库时，new MongoStore()参数需要注意
  * 				在express4.0中，使用URL参数
+ * 		4.multer
+ * 			上传文件时，对文件的处理
  * 			
  * 		
  * 		
@@ -65,6 +67,9 @@ app.use('/admin',adminRouters);
 // 设置静态资源
 app.use(express.static('./public'));
 
+
+
+
 // 404页面，一定要放在所有路由之后
 // 只有匹配不到路由时，才会进入此处
 app.use(function(req,res){
@@ -92,7 +97,7 @@ app.listen(8888,function(){
 /**
  * 还没有解决的问题
  * 1.日志
- * 2.编辑器上传图片
+ * 2.编辑器上传图片--
  * 3.关闭／刷新编辑器窗口 触发事件
  * 4.统计PV的方法 $inc
  */

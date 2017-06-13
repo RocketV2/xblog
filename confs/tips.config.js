@@ -30,4 +30,6 @@ module.exports = {
 	db_userinfo_err:"用户原始信息错误！",
 	success:"成功",
 	error:"错误",
+	uploadfile_error:"上传失败！",
+	uploadfile_success:"上传成功！",
 };

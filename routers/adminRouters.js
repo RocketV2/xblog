@@ -1,5 +1,6 @@
 
 var express       = require('express');
+var multer        = require('multer');
 var URL           = require('url');
 var querystring   = require('querystring');
 var tips          = require('../confs/tips.config');
@@ -487,7 +488,49 @@ router.post('/user',function(req,res){
 	});
 });
 
+// 处理上传的文件／图片
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'public/uploadfile')
+  },
+  filename: function (req, file, cb) {
+  	// 自定义文件名称
+    var fileFormat = (file.originalname).split(".");
+    var suffix     = fileFormat[fileFormat.length-1];// 后缀
+    //获取源名称 不带后缀
+    fileFormat.pop();
+    var fileName   = fileFormat.join('');// 获取除去后缀之后源元件名称
 
+    var finalName  = fileName+'-'+file.fieldname + '-' + Date.now() + "." + suffix;
+    cb(null, finalName);
+  }
+});
+router.post('/uploadfile',OutStatus);
+router.post('/uploadfile',multer({ storage: storage }).any(),function(req,res){
+	// editor.md希望返回如下json
+	// {
+	//     success : 0 | 1,           // 0 表示上传失败，1 表示上传成功
+	//     message : "提示的信息，上传成功或上传失败及错误信息等。",
+	//     url     : "图片地址"        // 上传成功时才返回
+	// }
+
+	// 经过multer处理，存储在硬盘中的文件名称会放到req.files中
+	// 注意研究 req.files的结构
+	var filename = req.files[0].filename;
+	if( filename ){//成功
+		res.json({
+			success:1,
+			message:tips.uploadfile_success,
+			url:'http://localhost:8888/uploadfile/'+filename,
+		});
+	}else{
+		res.json({
+			success:0,
+			message:tips.uploadfile_error,
+			url:'',
+		});
+	}
+});
 
 
 

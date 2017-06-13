@@ -13,8 +13,9 @@ form{
 .form-text{
 	margin-top:15px;
 }
-#addTextArea{
-	/*width:100%;*/
+/*markdown 编辑器的设置*/
+#editormd{
+	z-index: 1000;
 }
 .form-tags{
 	margin-top: 15px;

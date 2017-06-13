@@ -2,11 +2,12 @@ extends main
 block titles
 	title 修改随笔
 block links
-	link(rel="stylesheet", href="../css/articles_editor.css")
+	link(rel="stylesheet", href="/editorMD/css/editormd.min.css")
+	link(rel="stylesheet", href="/css/articles_editor.css")
 block scripts
-	script(src="../kindeditor/kindeditor-min.js")
-	script(src="../kindeditor/lang/zh_CN.js")
-	script(src="../js/articles_editor.js")
+	script(src="/common/jquery.min.js")
+	script(src="/editorMD/editormd.min.js")
+	script(src="/js/articles_editor.js")
 
 block contents
 	form(action="/admin/update",method="post")
@@ -19,9 +20,9 @@ block contents
 			div.input-group
 				span#basic-addon1.input-group-addon 标题
 				input.form-control(type="text",name="title",aria-describedby="basic-addon1",value=data.title)
-			//- 文章内容
-			div.form-text
-				textarea#editorTextArea(name="content",rows="18") #{data.content}
+			//- 文章内容 使用 MarkDown 编辑器
+			div#editormd.form-text
+				textarea(name="content") #{data.content}
 			//- 文章标签
 			div.form-tags.panel.panel-info
 				div.panel-heading
