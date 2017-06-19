@@ -33,7 +33,8 @@ var session      = require('express-session');
 var MongoStore   = require('connect-mongo')(session);
 var flash        = require('connect-flash-plus');
 var settings     = require('./confs/db.config');
-var adminRouters = require('./routers/adminRouters');
+var adminRouters = require('./routers/adminRouters');//后端路由
+var appRouters = require('./routers/appRouters');// 前端路由
 var app          = express();
 
 // 设置cookie-parser
@@ -62,7 +63,8 @@ app.set('views','./views');
 app.set('view engine','pug');
 
 // 引入路由控制器
-app.use('/admin',adminRouters);
+app.use('/admin',adminRouters);// 后端请求处理
+app.use('/',appRouters); // 前端app请求
 
 // 设置静态资源
 app.use(express.static('./public'));
@@ -79,7 +81,7 @@ app.use(function(req,res){
 
 // 设置监听端口
 app.listen(8888,function(){
-	console.log('The app is on 8080!');
+	console.log('The app is on 8888!');
 });
 
 
