@@ -15,6 +15,7 @@ form{
 }
 #addTextArea{
 	width:100%;
+	z-index: 1000;
 }
 .form-tags{
 	margin-top: 15px;

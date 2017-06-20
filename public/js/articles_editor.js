@@ -3,7 +3,7 @@ $(function(){
 	// 使用Editor.md编辑器
 	// 
 	var editor = editormd({
-		id : "editormd", 
+		id : "addTextArea", 
 		// 根据路径加载编辑器依赖
         path : "/editorMD/lib/",
         // 上传图片相关配置

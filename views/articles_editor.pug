@@ -21,14 +21,14 @@ block contents
 				span#basic-addon1.input-group-addon 标题
 				input.form-control(type="text",name="title",aria-describedby="basic-addon1",value=data.title)
 			//- 文章内容 使用 MarkDown 编辑器
-			div#editormd.form-text
+			div#addTextArea.form-text
 				textarea(name="content") #{data.content}
 			//- 文章标签
 			div.form-tags.panel.panel-info
 				div.panel-heading
 					span.panel-title 文章标签
 				div.panel-body
-					- var arr = ['HTML','JavaScript','CSS','VueJs','NodeJs','Express','MongoDB','Linux'];
+					- var arr = ['Javascript','Nodejs','ES6','Webpack','MongoDB','project'];
 					each val in arr
 						- if(val == data.tags)
 							li
