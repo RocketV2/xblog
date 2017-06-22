@@ -34,7 +34,7 @@ var MongoStore   = require('connect-mongo')(session);
 var flash        = require('connect-flash-plus');
 var settings     = require('./confs/db.config');
 var adminRouters = require('./routers/adminRouters');//后端路由
-var appRouters = require('./routers/appRouters');// 前端路由
+var appRouters = require('./app/routers/appRouters');// 前端路由
 var app          = express();
 
 // 设置cookie-parser
@@ -59,7 +59,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extend:false}));
 
 // 设置模板引擎
-app.set('views','./views');
+app.set('views',['./views','app/views']);
 app.set('view engine','pug');
 
 // 引入路由控制器
