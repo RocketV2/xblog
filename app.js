@@ -67,7 +67,8 @@ app.use('/admin',adminRouters);// 后端请求处理
 app.use('/',appRouters); // 前端app请求
 
 // 设置静态资源
-app.use(express.static('./public'));
+app.use(express.static('./public'));// 公共文件
+app.use('/app',express.static('./app'));// 前端界面文件
 
 
 

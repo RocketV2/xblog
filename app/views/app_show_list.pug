@@ -1,0 +1,37 @@
+extends app_index
+
+block links
+	link(rel="stylesheet", href="/app/css/app_show_list.css")
+block scripts
+
+block content
+	div.pages-list
+		//- div.pages-cell
+		//- 	div.page-time 
+		//- 		| 2017年5月30日
+		//- 	div.page-title
+		//- 		a(href="/one") 提高代码质量
+		//- 	div.page-content
+		//- 		| 摘要：你好，hello 我啊龙卷风......
+		//- 		a(href="/one") &nbsp;&nbsp;阅读全文
+		//- 	div.page-tags
+		//- 		| posted @ 2016-02-21 16:00 xubiao 阅读(1846) 
+		each val,index in pageList
+			- var time = new Date(val.time);
+			- var year = time.getFullYear();
+			- var month = time.getMonth();
+			- var day = time.getDate();
+			- var hours = time.getHours();
+			- var minutes = time.getMinutes();
+			- var contents = (val.content).replace(/<[^>]+>/g,"");
+			-var pageContents = contents.substring(0,81);;
+			div.pages-cell
+				div.page-time 
+					| #{year}年#{month}月#{day}日
+				div.page-title
+					a(href="/one")= val.title
+				div.page-content
+					| 摘要：#{pageContents}.....
+					a(href="/one") &nbsp;&nbsp;阅读全文
+				div.page-tags
+					| posted @ #{year}-#{month}-#{day} #{hours}:#{minutes} #{val.author} 阅读(#{val.pv}) 

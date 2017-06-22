@@ -1,0 +1,46 @@
+
+.pages-cell{
+	background: #fff;
+    padding: 20px;
+    border: 1px solid #dedede;
+}
+.pages-cell:hover{
+	border: 1px solid #35b1f1;
+}
+.page-time{
+	color: #fff;
+    background-color: #45bcf9;
+    padding: 7px 7px;
+    font-size: 12px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+.page-title{
+	font-size: 21px;
+    line-height: 1.5em;
+    float: left;
+    clear: right;
+}
+.page-title a{
+	text-decoration: none;
+	color: #555555;
+}
+.page-content{
+	padding: 15px 0;
+    clear: both;
+}
+.page-content a{
+	text-decoration: none;
+	color: #a3b36b;
+}
+.page-tags{
+	clear: both;
+    color: #bcbcbc;
+    float: none;
+    text-align: left;
+    line-height: 200%;
+    font-size: 12px;
+}

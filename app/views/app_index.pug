@@ -5,12 +5,57 @@ html
 		meta(name="viewport",content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no")
 		block titles
 		//- link(rel="shortcut icon",href="/images/favicon.ico",type="image/x-icon")
-		link(rel="stylesheet", href="/bootstrap/css/bootstrap.min.css")
-		link(rel="stylesheet", href="/css/app_index.css")
-		script(src="/common/jquery.min.js")
-		script(src="/bootstrap/js/bootstrap.min.js")
+		//- link(rel="stylesheet", href="/bootstrap/css/bootstrap.min.css")
+		//- script(src="/common/jquery.min.js")
+		//- script(src="/bootstrap/js/bootstrap.min.js")
+		//- 自定义样式／脚本
+		link(rel="stylesheet", href="/app/css/app_index.css")
 		//- 定义继承模块 block
 		block links
 		block scripts
 	body
-		p smile and positive  vv bb nn
+		div.headers
+			div.navbar
+				ul
+					li.navli 
+						a(href="#") xblog
+					li.navli
+						a(href="/") 首页
+					li.navli
+						a(href="/Javascript") Javascript
+					li.navli
+						a(href="#") ES6
+					li.navli
+						a(href="#") Nodejs
+					li.navli
+						a(href="#") MongDB
+					li.navli
+						a(href="#") 项目
+		//- 主体内容
+		div.main
+			//- 侧边导航
+			div.sidebar
+				div.search
+				div.links
+				div.docs-kinds
+				div.docs-years
+
+			//- 内容
+			div.contents
+				block content
+
+		div.footers
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,111 @@
+html,body{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-color: #f0eef5;
+}
+/*头部样式*/
+.headers{
+	/*border: 1px solid black;*/
+	width: 100%;
+	height: 60px;
+	background-color: #35b1f1;
+}
+.navbar{
+	width: 90%;
+	max-width: 1100px;
+	min-width: 800px;
+	margin: 0px auto;
+}
+.navbar ul{
+	margin: 0px;
+	padding: 0px;
+}
+.navbar li{
+	margin: 0px;
+	list-style: none;
+	line-height: 60px;
+	display: inline-block;
+}
+.navbar li a{
+	color: #fff;
+	padding: 15px 20px;
+	text-decoration: none;
+	text-shadow: 3px 3px 3px #000;
+	font-size: 16px;
+}
+.navbar li:first-of-type a{
+	font-size: 20px;
+}
+li.navli:hover{
+	background-color: #1ba0e4;
+}
+li.navli a:hover{
+	color: #aed7ec;
+}
+
+
+
+
+
+
+.main, .footer{
+	position: relative;
+}
+
+
+/*主体样式*/
+.main{
+	/*border: 1px solid black;*/
+	width: 90%;
+	max-width: 1100px;
+	min-width: 800px;
+	
+	height: 1000px;
+	min-height: 450px;
+	margin: 15px auto;
+
+}
+.contents{
+	/*border: 1px solid black;*/
+	padding: 0px;
+	margin-right: 260px;
+	background-color: #fff;
+	height: 1000px;
+}
+
+/*侧边信息框*/
+.sidebar{
+	border: 1px solid black;
+	float: right;
+	width: 250px;
+}
+.search{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footers{
+	border: 1px solid black;
+	width: 100%;
+	height: 70px;
+}
