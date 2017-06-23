@@ -2,8 +2,11 @@ extends app_index
 
 block links
 	link(rel="stylesheet", href="/app/css/app_show_list.css")
+	
 block scripts
+	
 
+	
 block content
 	div.pages-list
 		//- div.pages-cell
@@ -29,9 +32,9 @@ block content
 				div.page-time 
 					| #{year}年#{month}月#{day}日
 				div.page-title
-					a(href="/one")= val.title
+					a(href="/blogs?_id="+val._id)= val.title
 				div.page-content
 					| 摘要：#{pageContents}.....
-					a(href="/one") &nbsp;&nbsp;阅读全文
+					a(href="/blogs?_id="+val._id) &nbsp;&nbsp;阅读全文
 				div.page-tags
 					| posted @ #{year}-#{month}-#{day} #{hours}:#{minutes} #{val.author} 阅读(#{val.pv}) 

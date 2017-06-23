@@ -3,13 +3,31 @@ extends app_index
 block titles
 
 block links
+	//- 引入markdown
+	link(rel="stylesheet", href="/editorMD/css/editormd.min.css")
+	
 	link(rel="stylesheet", href="/app/css/app_show_page.css")
 
 block scripts
+	//- 引入markdown
+	script(src="/common/jquery.min.js")
+	script(src="/editorMD/lib/marked.min.js")
+	script(src="/editorMD/lib/prettify.min.js")
+	script(src="/editorMD/lib/raphael.min.js")
+	script(src="/editorMD/lib/underscore.min.js")
+	script(src="/editorMD/lib/sequence-diagram.min.js")
+	script(src="/editorMD/lib/flowchart.min.js")
+	script(src="/editorMD/lib/jquery.flowchart.min.js")
+	script(src="/editorMD/editormd.js")
+	script(src="/app/js/app_show_page.js")
 
 block content
 	div.page-show
 		div.page-content
+			//- !=pageData.content
+			//- p#markd !{pageData.content}
+			div#editormd-view
+				textarea(name="content", display="none") !{pageData.content}
 		div.page-detail
 			div.detail-kind
 			div.detail-like

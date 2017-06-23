@@ -1,4 +1,4 @@
-
+/*文章整体*/
 .page-show{
 	background: #fff;
     overflow: hidden;
@@ -6,11 +6,16 @@
     border: 1px solid #dedede;
 }
 
+/*文章内容*/
+.page-content{}
+
+.page-content  pre.prettyprint.linenums.prettyprinted{
+	/*对markdown中的代码部分优化*/
+	margin-right: 40px;
+}
 
 
-
-
-
+/*文章标签，时间，上下篇等*/
 .detail-info{
     color: #bcbcbc;
     float: none;

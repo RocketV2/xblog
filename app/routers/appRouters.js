@@ -25,7 +25,6 @@ router.get('/',function(req,res){
 			docs.forEach(function(val,index){
 				val.content = markdown.toHTML(val.content);
 			});
-			console.log(docs)
 			res.render('app_show_list',{
 				pageList:docs,
 			});
@@ -33,41 +32,31 @@ router.get('/',function(req,res){
 	});
 });
 
-// // 获取具体文章内容
-// router.get('/blogs',function(req,res){
-// 	res.set({'Access-Control-Allow-Origin':'*'});
-// 	// 解析文章_id
-// 	var _id = querystring.parse( URL.parse(req.url).query )._id;
-// 	// 连接数据库 查询数据
-// 	mongo.Client.connect(mongo.URL,function(err,db){
-// 		if(err){
-// 			res.json({error:"database error!"})
-// 		}
-// 		var col = db.collection('articles');
-// 		var selector = {"_id":mongo.ObjectId(_id)};
-// 		col.find(selector).toArray(function(err,docs){
-// 			if(err){
-// 				res.json({error:"database error!"})
-// 			}
-// 			// markdown语法 文章内容需要转换
-// 			// docs[0].content = markdown.toHTML(docs[0].content);
-// 			res.json(docs[0]);
-// 		});
-// 	});
-// })
+// 获取具体文章内容
+router.get('/blogs',function(req,res){
+	// 解析文章_id
+	var _id = querystring.parse( URL.parse(req.url).query )._id;
+	// 连接数据库 查询数据
+	mongo.Client.connect(mongo.URL,function(err,db){
+		if(err){
+			res.json({error:"database error!"})
+		}
+		var col = db.collection('articles');
+		var selector = {"_id":mongo.ObjectId(_id)};
+		col.find(selector).toArray(function(err,docs){
+			if(err){
+				res.json({error:"database error!"})
+			}
+			// markdown语法 文章内容需要转换
+			// docs[0].content = markdown.toHTML(docs[0].content);
+			console.log(docs)
+			res.render('app_show_page',{
+				pageData:docs[0],
+			});
+		});
+	});
+})
 
-router.get('/',function(req,res){
-	res.render('app_index',{});
-});
-
-router.get('/Javascript',function(req,res){
-	res.render('app_show_list',{});
-});
-
-
-router.get('/one',function(req,res){
-	res.render('app_show_page',{});
-});
 
 
 
