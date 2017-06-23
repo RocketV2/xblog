@@ -6,12 +6,25 @@
     border: 1px solid #dedede;
 }
 
-/*文章内容*/
-.page-content{}
+/*文章标题*/
+.page-title{
+	font-size: 20px;
+	border-bottom: 1px solid #d3d3d3;
+	padding-bottom: 20px;
+	font-style: italic;
+}
 
-.page-content  pre.prettyprint.linenums.prettyprinted{
-	/*对markdown中的代码部分优化*/
-	margin-right: 40px;
+/*文章内容*/
+.page-content{
+	padding: 20px;
+}
+
+#editormd-view{
+	/**	
+	 * 对markdown中的样式优化，自定义
+	 */
+	padding: 0px;
+	overflow: inherit;
 }
 
 
