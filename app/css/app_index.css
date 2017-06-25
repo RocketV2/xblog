@@ -158,6 +158,7 @@ li.navli:first-of-type:hover a:hover{
 			text-decoration: none;
 			font-size: 16px;
 			padding: 9px 19px;
+			color: #fff;
 			background-color: #ef9790;
 			border-bottom-right-radius: 5px;
 			border-top-right-radius: 5px;
