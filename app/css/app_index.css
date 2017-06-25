@@ -7,7 +7,6 @@ body{
 }
 /*头部样式*/
 .headers{
-	/*border: 1px solid black;*/
 	width: 100%;
 	height: 60px;
 	background-color: #383333;
@@ -36,16 +35,23 @@ body{
 	text-decoration: none;
 	text-shadow: 3px 3px 3px #333;
 	font-size: 16px;
+	opacity: 0.7;
 }
 .navbar li:first-of-type a{
 	font-size: 20px;
+	color: black;
 }
 li.navli:hover{
-	/*background-color: #000;*/
-	border-bottom: 3px solid green;
+	border-bottom: 3px solid #3287b3;
 }
 li.navli a:hover{
-	color: #aed7ec;
+	opacity: 1;
+}
+li.navli:first-of-type:hover{
+	border: 0px;
+}
+li.navli:first-of-type:hover a:hover{
+	color: #fff;
 }
 
 .main, .footer{
@@ -204,11 +210,12 @@ li.navli a:hover{
 .footers{
 	/*border: 1px solid black;*/
 	width: 100%;
-	height: 70px;
-	line-height: 70px;
+	height: 120px;
+	line-height: 120px;
 	font-size: 12px;
 	color: #333;
 	text-align: center;
+	clear: both;
 }
 
 

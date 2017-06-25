@@ -20,19 +20,19 @@ html
 			div.navbar
 				ul
 					li.navli 
-						a(href="#") xblog
+						a(href="/") xblog
 					li.navli
 						a(href="/") 首页
 					li.navli
-						a(href="/Javascript") Javascript
+						a(href="/list?kind=Javascript") Javascript
 					li.navli
-						a(href="#") ES6
+						a(href="/list?kind=ES6") ES6
 					li.navli
-						a(href="#") Nodejs
+						a(href="/list?kind=Nodejs") Nodejs
 					li.navli
-						a(href="#") MongDB
+						a(href="/list?kind=MongoDB") MongDB
 					li.navli
-						a(href="#") 项目
+						a(href="/list?kind=Project") 项目
 		//- 主体内容
 		div.main
 			//- 侧边导航
@@ -41,10 +41,10 @@ html
 					div.link-title 关注我
 					ul.link-ul
 						li.link-li
-							a(href="#")
+							a(href="https://github.com/RocketV2",target="_blank")
 								<i class="fa fa-github" aria-hidden="true"></i>
 						li.link-li
-							a(href="#")
+							a(href="#",target="_blank")
 								<i class="fa fa-rss" aria-hidden="false"></i>
 				div.faith
 					| keep it simple
@@ -92,7 +92,7 @@ html
 				block content
 		//- 页脚
 		div.footers
-			div.foot-info Copyright © 2013-2017 xblog All Rights Reserved. 
+			div.foot-info Copyright © 2015-2017 xblog All Rights Reserved. 
 
 
 
