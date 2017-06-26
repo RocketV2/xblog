@@ -8,10 +8,11 @@ html
 		block titles
 		//- link(rel="shortcut icon",href="/images/favicon.ico",type="image/x-icon")
 		//- link(rel="stylesheet", href="/bootstrap/css/bootstrap.min.css")
-		//- script(src="/common/jquery.min.js")
+		script(src="/common/jquery.min.js")
 		//- script(src="/bootstrap/js/bootstrap.min.js")
 		//- 自定义样式／脚本
 		link(rel="stylesheet", href="/app/css/app_index.css")
+		script(src="/app/js/app_index.js")
 		//- 定义继承模块 block
 		block links
 		block scripts
@@ -59,22 +60,11 @@ html
 				div.docs-news
 					div.docs-news-title
 						| 热门文章
-					ul.docs-news-ul
-						li.docs-news-li
-							a(href="#") nodejs爬虫教程 nodejs爬虫教程 nodejs爬虫教程 
-							span 2017-2-1 阅读(20)
-						li.docs-news-li
-							a(href="#") nodejs爬虫教程 
-							span 2017-2-1 阅读(20)
-						li.docs-news-li
-							a(href="#") nodejs爬虫教程 
-							span 2017-2-1 阅读(20)
-						li.docs-news-li
-							a(href="#") nodejs爬虫教程 
-							span 2017-2-1 阅读(20)
-						li.docs-news-li
-							a(href="#") nodejs爬虫教程 
-							span 2017-2-1 阅读(20)
+					ul#docs-news-ul.docs-news-ul
+						//- li.docs-news-li
+						//- 	a(href="#") nodejs爬虫教程 nodejs爬虫教程 nodejs爬虫教程 
+						//- 	span 2017-2-1 阅读(20)
+			
 				//- 文章分类
 				div.docs-kinds
 					div.docs-kinds-title

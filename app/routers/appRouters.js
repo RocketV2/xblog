@@ -169,7 +169,27 @@ router.get('/list',function(req,res){
 	});
 });
 
-
+// 侧边栏 热门文章
+router.get('/aside/news',function(req,res){
+	// 连接数据库 查询数据
+	mongo.Client.connect(mongo.URL,function(err,db){
+		if(err){
+			res.json({error:"database error!"})
+		}
+		var col = db.collection('articles');
+		// 根据pv排序
+		col.find({},{'title':1,'pv':1,'time':1}).sort({'pv':1}).limit(5).toArray(function(err,docs){
+			if(err){
+				res.json({error:"database error!"})
+			}
+			// markdown语法 文章内容需要转换
+			// docs[0].content = markdown.toHTML(docs[0].content);
+			res.json({
+				data:docs
+			});
+		});
+	});
+});
 
 
 
