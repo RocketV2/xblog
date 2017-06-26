@@ -3,7 +3,8 @@ html,body{
 	padding: 0px;
 }
 body{
-	background-color: #f0eef5;
+	/*background-color: #f0eef5;*/
+	background-color: #eee;
 }
 /*头部样式*/
 .headers{
@@ -163,34 +164,42 @@ li.navli:first-of-type:hover a:hover{
 			border-bottom-right-radius: 5px;
 			border-top-right-radius: 5px;
 		}
-	/*文章分类,文章归档*/
-	.docs-kinds,.docs-years{
+
+	/*文章分类,文章归档,热门文章,友情链接*/
+	.docs-kinds,.docs-years,.docs-news,.docs-friends{
 		width: 100%;
 		background-color: #fff;
 		border-radius: 5px;
 		margin-bottom: 35px;
 		padding-bottom: 15px;
 	}
-		.docs-kinds-title,.docs-years-title{
+		.docs-kinds-title,.docs-years-title,.docs-news-title,.docs-years-title{
 			width: 210px;
 			height: 38px;
 			line-height: 38px;
 			padding-left: 20px;
 		}
-		.docs-kinds-years-ul{
+		.docs-kinds-years-ul,.docs-news-ul,.docs-friends-ul{
 			margin: 0px;
 			padding: 0px 10px;
 		}
-		.docs-kinds-years-li{
+		.docs-kinds-years-li,.docs-frieds-li{
 			list-style: none;
 			height: 20px;
 			padding: 15px 0px 15px 20px;
 			border-bottom: 1px solid #ddd;
 		}
-		.docs-kinds-years-li:last-child{
+		.docs-news-li{
+			list-style: none;
+			min-height: 35px;
+			max-height: 75px;
+			padding: 15px 0px 15px 20px;
+			border-bottom: 1px solid #ddd;
+		}
+		.docs-kinds-years-li:last-child,.docs-news-li:last-child,.docs-frieds-li:last-child{
 			border-bottom: 0px solid #ddd;
 		}
-		.docs-kinds-years-li a{
+		.docs-kinds-years-li a,.docs-news-li a,.docs-frieds-li a{
 			text-decoration: none;
 			font-size: 15px;
 			color: #a09b9b;
@@ -203,9 +212,22 @@ li.navli:first-of-type:hover a:hover{
 		    font-size: 12px;
 		    margin-right: 6px;
 		}
-		.docs-kinds-years-li a:hover{
+		.docs-kinds-years-li a:hover,.docs-frieds-li a:hover{
 			color: #000;
+			font-size: 18px;
 		}
+
+		/*热门文章局部样式*/
+		.docs-news-li > span{
+			display: inline-block;
+			color: #62bbc3;
+			font-size: 12px;
+		}
+		.docs-news-li:hover{
+			border-left: 2px solid #62bbc3;
+		}
+
+
 
 /*页脚样式*/
 .footers{

@@ -37,6 +37,7 @@ html
 		div.main
 			//- 侧边导航
 			div.sidebar
+				//- 关注我
 				div.link
 					div.link-title 关注我
 					ul.link-ul
@@ -49,11 +50,31 @@ html
 				div.faith
 					| keep it simple
 					| keep it stupid
+				//- 搜索文章
 				div.search
 					input#pageSearch(type="text",placeholder="全局搜索")
 					div.search-btn
 						a(href="#") 搜索
-				div.links
+				//- 热门文章
+				div.docs-news
+					div.docs-news-title
+						| 热门文章
+					ul.docs-news-ul
+						li.docs-news-li
+							a(href="#") nodejs爬虫教程 nodejs爬虫教程 nodejs爬虫教程 
+							span 2017-2-1 阅读(20)
+						li.docs-news-li
+							a(href="#") nodejs爬虫教程 
+							span 2017-2-1 阅读(20)
+						li.docs-news-li
+							a(href="#") nodejs爬虫教程 
+							span 2017-2-1 阅读(20)
+						li.docs-news-li
+							a(href="#") nodejs爬虫教程 
+							span 2017-2-1 阅读(20)
+						li.docs-news-li
+							a(href="#") nodejs爬虫教程 
+							span 2017-2-1 阅读(20)
 				//- 文章分类
 				div.docs-kinds
 					div.docs-kinds-title
@@ -86,7 +107,15 @@ html
 							a(href="#") 2014 (21)
 						li.docs-kinds-years-li 
 							a(href="#") 2013 (3)
-
+				//- 友情链接
+				div.docs-friends
+					div.docs-years-title
+						| 友情链接
+					- var friendsArr = [];
+					ul.docs-friends-ul
+						li.docs-frieds-li 
+							a(href="http://taobaofed.org/",target="_blank") 淘宝FED
+	
 			//- 内容
 			div.contents
 				block content

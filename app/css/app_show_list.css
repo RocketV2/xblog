@@ -42,3 +42,66 @@
     line-height: 200%;
     font-size: 12px;
 }
+
+
+/*分页*/
+.split-page{
+    width: 100%;
+    clear: left;
+    padding: 35px 0;
+}
+.split-page-ul{
+    margin: 0px;
+    padding: 0px;
+    width: 450px;
+    margin: 0px auto;
+    text-align: center;
+}
+.split-page-li{
+    list-style: none;
+    text-decoration: none; 
+    display: inline-block;
+    /*height: 24px;*/
+    /*width: 32px;*/
+    margin: 0px 2px;
+    background-color: #eee;
+    text-align: center;
+    line-height: 24px;
+}
+.split-page-li a{
+    padding: 4px 14px;
+    text-decoration: none;
+}
+.split-page-li > a{
+    color: #666;
+    background-color: #eee;
+    font-size: 12px;
+}
+.split-page-li:hover{
+    background-color: #428bca;
+}
+.split-page-li > a:hover{
+    background-color: #428bca;
+    color: #fff;
+}
+#totalPages,#curPage,#curKind{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

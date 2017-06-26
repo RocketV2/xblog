@@ -22,19 +22,7 @@
 table > tbody > tr > th a:hover{
 	text-decoration: none;
 }
-.page-style{
-	position: relative;
-}
-.page-ul-style{
-	position: absolute;
-	right: 30px;
-}
-#totalPages{
-	display: none;
-}
-#curPage{
-	display: none;
-}
+
 .articles-editor-a,.articles-delete-li{
 	color:black;
 } 
@@ -47,4 +35,18 @@ table > tbody > tr > th a:hover{
 .articles-delete-li{
 	list-style: none;
 	padding: 0;
+}
+/*分页功能*/
+.page-style{
+	position: relative;
+}
+.page-ul-style{
+	position: absolute;
+	right: 30px;
+}
+#totalPages{
+	display: none;
+}
+#curPage{
+	display: none;
 }
