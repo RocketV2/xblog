@@ -37,7 +37,10 @@ $(function(){
 				var name = val._id,
 					num  = val.num_total;
 				html += "<li class='docs-kinds-years-li'> " 
-							+"<a href='/list?kind="+name+"'>"+name+"&nbsp;("+num+")</a>"
+							+"<a href='/list?kind="+name+"'>"
+								+"<i class='fa fa-folder-o' aria-hidden='true'></i>&nbsp;"
+								+name+"&nbsp;("+num+")"
+							+"</a>"
 						+"</li>";
 			});
 			$("#docs-kinds-years-ul").html(html);
