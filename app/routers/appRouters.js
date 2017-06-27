@@ -54,7 +54,6 @@ router.get('/',function(req,res){
 				});
 			});
 		});
-		
 	});
 });
 
@@ -208,7 +207,32 @@ router.get('/aside/kinds',function(req,res){
 
 });
 
+// 侧边栏 搜索
+router.post('/search',function(req,res){
+	var searchText = req.body.searchText,
+		//过滤空格
+		search     = searchText.replace(/(^\s*)|(\s*$)/g, ""),
+		//使用正则
+		regSearch  = new RegExp(search);
+	// 使用mongodb的模糊查询
+	mongo.Client.connect(mongo.URL,function(err,db){
+		if(err){}
+		var col = db.collection('articles');
+		var selector = {'content':regSearch};
+		col.find(selector).toArray(function(err,docs){
+			if(err){}
+			// markdown语法 文章内容需要转换
+			docs.forEach(function(val,index){
+				val.content = markdown.toHTML(val.content);
+			});
 
+			res.render('app_show_list',{
+				pageList:docs,
+			});
+		});
+	})
+
+});
 
 
 

@@ -41,37 +41,39 @@ block content
 					| posted @ #{year}-#{month}-#{day} #{hours}:#{minutes} #{val.author} 阅读(#{val.pv}) 分类:#{val.tags}
 
 	//- 分页
-	div.split-page
-		ul.split-page-ul
-			span#totalPages #{pageCount}
-			span#curPage #{curPage}
-			span#curKind #{curKind}
-			- var curURL = '';
-			- if(curKind=='')
-				- curURL ='/?page=';
-			- else
-				- curURL = '/list?kind='+curKind+"&page=";
+	- if(pageCount)
+		// 全文搜索时不会有分页
+		div.split-page
+			ul.split-page-ul
+				span#totalPages #{pageCount}
+				span#curPage #{curPage}
+				span#curKind #{curKind}
+				- var curURL = '';
+				- if(curKind=='')
+					- curURL ='/?page=';
+				- else
+					- curURL = '/list?kind='+curKind+"&page=";
 
-			- if(pageCount && pageCount<=5)
-				li.split-page-li 
-					a(href="javascript:void();") 上一页
-				- for(var i=1;i<=pageCount;i++)
+				- if(pageCount && pageCount<=5)
 					li.split-page-li 
-						a(href=curURL+i)= i
-				li.split-page-li 
-						a(href="javascript:void();") 下一页
-			- else if(pageCount && pageCount>5)
-				li.split-page-li 
-					a(href="#") 上一页
-				li.split-page-li 
-					a(href="#") ...
-				- for(var i=1;i<=5;i++)
+						a(href="javascript:void();") 上一页
+					- for(var i=1;i<=pageCount;i++)
+						li.split-page-li 
+							a(href=curURL+i)= i
 					li.split-page-li 
-						a(href="/?page="+i)= i
-				li.split-page-li 
-					a(href="#") ...
-				li.split-page-li 
-					a(href="#") 下一页
+							a(href="javascript:void();") 下一页
+				- else if(pageCount && pageCount>5)
+					li.split-page-li 
+						a(href="#") 上一页
+					li.split-page-li 
+						a(href="#") ...
+					- for(var i=1;i<=5;i++)
+						li.split-page-li 
+							a(href="/?page="+i)= i
+					li.split-page-li 
+						a(href="#") ...
+					li.split-page-li 
+						a(href="#") 下一页
 
 
 

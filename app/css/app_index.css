@@ -152,17 +152,20 @@ li.navli:first-of-type:hover a:hover{
 			width: 70px;
 			height: 40px;
 			float: right;
+			padding: 0px;
+			border-width: 0px;
 			text-align: center;
 			line-height: 40px;
-		}
-		.search a{
 			text-decoration: none;
 			font-size: 16px;
-			padding: 9px 19px;
 			color: #fff;
 			background-color: #ef9790;
 			border-bottom-right-radius: 5px;
 			border-top-right-radius: 5px;
+			outline: none;
+		}
+		.search-btn:hover{
+			background-color: #de3123;
 		}
 
 	/*文章分类,文章归档,热门文章,友情链接*/

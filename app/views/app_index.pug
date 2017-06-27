@@ -52,10 +52,9 @@ html
 					| keep it simple
 					| keep it stupid
 				//- 搜索文章
-				div.search
-					input#pageSearch(type="text",placeholder="全局搜索")
-					div.search-btn
-						a(href="#") 搜索
+				form(action="/search",method="POST").search
+					input#pageSearch(type="text",name="searchText",placeholder="全文搜索")
+					input(type="submit" value="搜索").search-btn
 				//- 热门文章
 				div.docs-news
 					div.docs-news-title
