@@ -3,6 +3,7 @@ $(function(){
 	/**
 	 * ajax请求完成对侧边栏数据的获取
 	 */
+	// 最新文章
 	$.ajax({
 		method:"GET",
 		url:"/aside/news",
@@ -25,6 +26,41 @@ $(function(){
 			console.log(err)
 		}
 	});
+
+	// 分类的文章篇数
+	$.ajax({
+		method:"GET",
+		url:"/aside/kinds",
+		success:function(json){
+			var html = '';
+			json.forEach(function(val,index){
+				var name = val._id,
+					num  = val.num_total;
+				html += "<li class='docs-kinds-years-li'> " 
+							+"<a href='/list?kind=Javascript'>"+name+"&nbsp;("+num+")</a>"
+						+"</li>";
+			});
+			$("#docs-kinds-years-ul").html(html);
+		},
+		error:function(err){}
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

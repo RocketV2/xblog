@@ -191,7 +191,22 @@ router.get('/aside/news',function(req,res){
 	});
 });
 
+// 侧边栏 分类文章的篇数
+router.get('/aside/kinds',function(req,res){
+	// 连接数据库
+	mongo.Client.connect(mongo.URL,function(err,db){
+		if(err){}
+		var col = db.collection('articles');
+		var selector = [{$group : {_id : "$tags", num_total : {$sum : 1}}}];
+		col.aggregate(selector).toArray(function(err,docs){
+			if(err){}
 
+			//分类查询成功
+			res.json(docs);
+		});
+	});
+
+});
 
 
 
