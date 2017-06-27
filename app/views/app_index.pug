@@ -69,23 +69,21 @@ html
 				div.docs-kinds
 					div.docs-kinds-title
 						| 分类
-					- var kindArr = [];
 					ul#docs-kinds-years-ul.docs-kinds-years-ul
-						li.docs-kinds-years-li 
-							a(href="/list?kind=Javascript") Javascript (20)
-						li.docs-kinds-years-li 
-							a(href="/list?kind=ES6") ES6 (18)
-						li.docs-kinds-years-li 
-							a(href="/list?kind=Nodejs") Nodejs (26)
-						li.docs-kinds-years-li 
-							a(href="/list?kind=MongoDB") MongoDB (21)
-						li.docs-kinds-years-li 
-							a(href="/list?kind=Project") Project (3)
+						//- li.docs-kinds-years-li 
+						//- 	a(href="/list?kind=Javascript") Javascript (20)
+						//- li.docs-kinds-years-li 
+						//- 	a(href="/list?kind=ES6") ES6 (18)
+						//- li.docs-kinds-years-li 
+						//- 	a(href="/list?kind=Nodejs") Nodejs (26)
+						//- li.docs-kinds-years-li 
+						//- 	a(href="/list?kind=MongoDB") MongoDB (21)
+						//- li.docs-kinds-years-li 
+						//- 	a(href="/list?kind=Project") Project (3)
 				//- 文章归档
 				div.docs-years
 					div.docs-years-title
 						| 归档
-					- var yearArr = [];
 					ul.docs-kinds-years-ul
 						li.docs-kinds-years-li 
 							a(href="#") 2017 (20)
@@ -101,10 +99,15 @@ html
 				div.docs-friends
 					div.docs-years-title
 						| 友情链接
-					- var friendsArr = [];
 					ul.docs-friends-ul
 						li.docs-frieds-li 
 							a(href="http://taobaofed.org/",target="_blank") 淘宝FED
+						li.docs-frieds-li 
+							a(href="https://cnodejs.org/",target="_blank") cnode
+						li.docs-frieds-li 
+							a(href="https://75team.com/",target="_blank") 360奇舞团
+						li.docs-frieds-li
+							a(href="http://www.alloyteam.com/",target="_blank") AlloyTeam
 	
 			//- 内容
 			div.contents
