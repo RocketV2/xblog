@@ -38,8 +38,12 @@ block content
 					| 摘要：#{pageContents}.....
 					a(href="/blogs?_id="+val._id) &nbsp;&nbsp;阅读全文
 				div.page-tags
-					| posted @ #{year}-#{month}-#{day} #{hours}:#{minutes} #{val.author} 阅读(#{val.pv}) 分类:#{val.tags}
-
+					span posted @ &nbsp;
+					span.page-tags-years &nbsp;#{year}-#{month}-#{day}&nbsp;
+					span.page-tags-hours &nbsp;#{hours}:#{minutes}&nbsp;
+					span.page-tags-author &nbsp;#{val.author}&nbsp;
+					span.page-tags-pv &nbsp;阅读(#{val.pv})&nbsp;
+					span.page-tags-kind &nbsp;分类:#{val.tags}
 	//- 分页
 	- if(pageCount)
 		// 全文搜索时不会有分页

@@ -1,92 +1,67 @@
+@import url('/app/css/app_show_list_adapt.css');
 
-.pages-cell{
-	background: #fff;
-    padding: 20px;
-    border: 1px solid #dedede;
-}
-.pages-cell:hover{
-	border: 1px solid #35b1f1;
-}
-.page-time{
-	color: #fff;
-    background-color: #45bcf9;
-    padding: 7px 7px;
-    font-size: 12px;
-    display: block;
-    float: left;
-    margin-right: 10px;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-}
-.page-title{
-	font-size: 21px;
-    float: left;
-}
-.page-title a{
-	text-decoration: none;
-	color: #555555;
-}
-.page-content{
-	padding: 15px 0;
-    clear: left;
-}
-.page-content a{
-	text-decoration: none;
-	color: #a3b36b;
-}
-.page-tags{
-	clear: left;
-    color: #bcbcbc;
-    float: none;
-    text-align: left;
-    line-height: 200%;
-    font-size: 12px;
+/** 
+ * 媒体查询 自适应
+ * iPhone 6p 414*736
+ * iPhone 5s 320*568
+*/
+@media screen and (min-width: 320px) and (max-width: 450px) {
+    /*文章内容调整*/
+    .pages-cell{
+        margin-bottom: 15px;
+        box-shadow: 3px 3px #d3dec7;
+    }
+    .page-title{
+        float: none;
+        font-size: 16px;
+        font-style: oblique;
+        padding-bottom: 8px;
+        border-bottom: 1px dashed #ddd;
+    }
+    .page-time{
+        float: none;
+        display: none;
+    }
+    .page-content{
+        font-size: 12px;
+    }
+    .page-tags > .page-tags-hours,.page-tags > .page-tags-author{
+        display: none;
+    }
+    /*分页调整*/
+    .split-page{
+        padding: 15px 0;
+    }
 }
 
 
-/*分页*/
-.split-page{
-    width: 100%;
-    clear: left;
-    padding: 35px 0;
+/** 
+ * 媒体查询 自适应
+ * 介于iPhone 6p 和iPad mini之间的
+*/
+@media screen and (min-width: 451px) and (max-width: 759px){
+    /*文章内容调整*/
+    .pages-cell{
+        margin-bottom: 15px;
+        box-shadow: 3px 3px #d3dec7;
+    }
 }
-.split-page-ul{
-    margin: 0px;
-    padding: 0px;
-    width: 450px;
-    margin: 0px auto;
-    text-align: center;
+
+
+/** 
+ * 媒体查询 自适应
+ * iPad 768*1024
+ * iPad Pro 1024*1366
+*/
+@media screen and (min-width: 760px){
+    
 }
-.split-page-li{
-    list-style: none;
-    text-decoration: none; 
-    display: inline-block;
-    /*height: 24px;*/
-    /*width: 32px;*/
-    margin: 0px 2px;
-    background-color: #eee;
-    text-align: center;
-    line-height: 24px;
-}
-.split-page-li a{
-    padding: 4px 14px;
-    text-decoration: none;
-}
-.split-page-li > a{
-    color: #666;
-    background-color: #eee;
-    font-size: 12px;
-}
-.split-page-li:hover{
-    background-color: #428bca;
-}
-.split-page-li > a:hover{
-    background-color: #428bca;
-    color: #fff;
-}
-#totalPages,#curPage,#curKind{
-    display: none;
-}
+
+
+
+
+
+
 
 
 

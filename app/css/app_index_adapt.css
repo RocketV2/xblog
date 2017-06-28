@@ -63,7 +63,7 @@ li.navli:first-of-type:hover a:hover{
 }
 
 .main, .footer{
-	position: relative;
+	/*position: relative;*/
 }
 
 /*主体样式*/
@@ -77,7 +77,6 @@ li.navli:first-of-type:hover a:hover{
 .contents{
 	padding: 0px;
 	margin-right: 300px;
-	background-color: #fff;
 }
 
 /*侧边信息框*/

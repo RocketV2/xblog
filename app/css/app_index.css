@@ -1,3 +1,4 @@
+@import url('/app/css/app_index_adapt.css');
 
 /**	
  * 媒体查询 自适应
@@ -5,19 +6,42 @@
  * iPhone 5s 320*568
 */
 @media screen and (min-width: 320px) and (max-width: 450px) {
-	@import url('/app/css/app_index_adapt.css');
-
+	/*头部*/
 	.headers{
-		display: none;
+		background-color: #fff;
 	}
+	.navbar{
+		width: 100%;
+		max-width: 450px;
+		min-width: 320px;
+	}
+	.navbar .navli{
+		display: block;
+		border: 1px solid black;
+		z-index: 1200;
+		/*background-color: blue;*/
+	}
+
+
+	/*侧边导航*/
 	.sidebar{
 		display: none;
+		/*position: relative;*/
 	}
+	/*主体内容*/
 	.main{
-		width: 100%;
+		width: 96%;
+		max-width: 450px;
+		min-width: 320px;
+		margin: 20px auto;
+		/*z-index: 1000;*/
 	}
-	.content{
-		width: 100%;
+	.contents{
+		margin: 0px;
+		padding: 0px;
+	}
+	.footers{
+		/*clear: both;*/
 	}
 }
 
@@ -27,9 +51,28 @@
  * 介于iPhone 6p 和iPad mini之间的
 */
 @media screen and (min-width: 451px) and (max-width: 759px){
+	/*头部*/
+	.navbar{
+		width: 100%;
+		max-width: 759px;
+		min-width: 451px;
+	}
 
+	/*侧边导航*/
 	.sidebar{
 		display: none;
+	}
+
+	/*文章主要内容*/
+	.main{
+		width: 96%;
+		max-width: 759px;
+		min-width: 451px;
+		margin: 20px auto;
+	}
+	.contents{
+		margin: 0px;
+		padding: 0px;
 	}
 }
 
