@@ -68,15 +68,18 @@ router.get('/blogs',function(req,res){
 		}
 		var col = db.collection('articles');
 		var selector = {"_id":mongo.ObjectId(_id)};
+		// 查询文章
 		col.find(selector).toArray(function(err,docs){
 			if(err){
 				res.json({error:"database error!"})
 			}
-			// markdown语法 文章内容需要转换
-			// docs[0].content = markdown.toHTML(docs[0].content);
 			res.render('app_show_page',{
 				pageData:docs[0],
 			});
+		});
+		// 增加PV
+		col.update(selector,{$inc:{'pv':1}},function(err){
+			db.close();
 		});
 	});
 });
