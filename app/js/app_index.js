@@ -1,5 +1,12 @@
 $(function(){
-	
+	/**
+	 * 进度条
+	 */
+	$('#loading-bar').animate({'width':'10%'},100);
+	window.onload = function(){
+		$('#loading-bar').animate({'width':'100%'},500);
+		$('#loading-bar').fadeOut();
+	}
 	/**
 	 * ajax请求完成对侧边栏数据的获取
 	 */
@@ -48,6 +55,9 @@ $(function(){
 		error:function(err){}
 	});
 
+	/**
+	 * 结合jQuery 实现返回顶部效果
+	 */
 	//只要窗口滚动,就触发下面代码 
 	$(window).scroll(function(){ 
 		//获取滚动后的高度 
@@ -62,13 +72,14 @@ $(function(){
 			$("#returnTop").stop().fadeOut(400); //如果返回或者没有超过,就淡入.必须加上stop()停止之前动画,否则会出现闪动   
 
 		}
-
 	});
-
 	//当点击标签的时候,使用animate在200毫秒的时间内,滚到顶部
 	$("#returnTop").click(function(){ 
 		$("html,body").animate({scrollTop:"0px"},800);
 	});
 
+	/**
+	 * 加载效果
+	 */
 
 });

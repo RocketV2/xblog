@@ -6,11 +6,18 @@ body{
 	/*background-color: #f0eef5;*/
 	background-color: #eee;
 }
+/*进度条*/
+#loading-bar{
+	background-color: #beca0c;
+	border: 2px solid transparent;
+}
+
 /*头部样式*/
 .headers{
 	width: 100%;
 	height: 60px;
 	background-color: #383333;
+	/*background-color: #62bbc3;*/
 	/*35b1f1*/
 	/*#383333*/
 }
