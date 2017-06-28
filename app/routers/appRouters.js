@@ -106,27 +106,6 @@ router.get('/list',function(req,res){
 		return res.redirect('/');
 	}
 
-	// // 连接数据库 查询数据
-	// mongo.Client.connect(mongo.URL,function(err,db){
-	// 	if(err){
-	// 		res.json({error:"database error!"});
-	// 	}
-	// 	var col = db.collection('articles');
-	// 	var selector = {'tags':kind};
-	// 	col.find(selector).limit(10).toArray(function(err,docs){
-	// 		if(err){
-	// 			res.json({error:"database error!"});
-	// 		}
-	// 		// markdown语法 文章内容需要转换
-	// 		docs.forEach(function(val,index){
-	// 			val.content = markdown.toHTML(val.content);
-	// 		});
-	// 		res.render('app_show_list',{
-	// 			pageList:docs,
-	// 		});
-	// 	});
-	// });
-
 	// 连接数据库 查询数据
 	mongo.Client.connect(mongo.URL,function(err,db){
 		if(err){
@@ -184,6 +163,7 @@ router.get('/aside/news',function(req,res){
 			if(err){
 				res.json({error:"database error!"})
 			}
+			db.close();
 			// markdown语法 文章内容需要转换
 			// docs[0].content = markdown.toHTML(docs[0].content);
 			res.json({
@@ -202,7 +182,7 @@ router.get('/aside/kinds',function(req,res){
 		var selector = [{$group : {_id : "$tags", num_total : {$sum : 1}}}];
 		col.aggregate(selector).toArray(function(err,docs){
 			if(err){}
-
+			db.close();
 			//分类查询成功
 			res.json(docs);
 		});
@@ -224,6 +204,7 @@ router.post('/search',function(req,res){
 		var selector = {'content':regSearch};
 		col.find(selector).toArray(function(err,docs){
 			if(err){}
+			db.close();
 			// markdown语法 文章内容需要转换
 			docs.forEach(function(val,index){
 				val.content = markdown.toHTML(val.content);
