@@ -6,6 +6,9 @@
  * iPhone 5s 320*568
 */
 @media screen and (min-width: 320px) and (max-width: 450px) {
+	.headers,.mian,.footers{
+		position: relative;
+	}
 	/*头部*/
 	.headers{
 		background-color: #fff;
@@ -18,10 +21,18 @@
 	.navbar .navli{
 		display: block;
 		border: 1px solid black;
+		height: 35px;
+		line-height: 35px;
 		z-index: 1200;
 		/*background-color: blue;*/
 	}
-
+	.navbar li:first-of-type{
+		height: 62px;
+		line-height: 62px;
+	}
+	div.navli-bar{
+		display: block;
+	}
 
 	/*侧边导航*/
 	.sidebar{
@@ -34,14 +45,10 @@
 		max-width: 450px;
 		min-width: 320px;
 		margin: 20px auto;
-		/*z-index: 1000;*/
 	}
 	.contents{
 		margin: 0px;
 		padding: 0px;
-	}
-	.footers{
-		/*clear: both;*/
 	}
 }
 

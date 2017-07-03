@@ -49,6 +49,9 @@ body{
 	font-size: 20px;
 	color: black;
 }
+div.navli-bar{
+		display: none;
+}
 li.navli:hover{
 	border-bottom: 3px solid #3287b3;
 }
