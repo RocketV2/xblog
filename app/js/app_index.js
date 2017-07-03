@@ -79,7 +79,14 @@ $(function(){
 	});
 
 	/**
-	 * 加载效果
+	 * 移动设备 屏幕适应
 	 */
+	$('.navli-bar').on('click',function(){
+		var s = $('.nav-list').css('display');
+		if(s=='block')
+			$('.nav-list').hide();
+		else
+			$('.nav-list').show();
+	});
 
 });

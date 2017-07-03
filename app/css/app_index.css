@@ -11,26 +11,46 @@
 	}
 	/*头部*/
 	.headers{
-		background-color: #fff;
+		/*background-color: #fff;*/
 	}
 	.navbar{
 		width: 100%;
 		max-width: 450px;
 		min-width: 320px;
 	}
+	.nav-logo{
+		display: block;
+		float: none;
+	}
+	div.navli-bar{
+		height: 30px;
+		width: 30px;
+		display: block;
+		float: right;
+		margin: 20px 20px;
+		color: #fff;
+		opacity: 0.7;
+		text-align: center;
+		font-size: 16px;
+	}
+	div.navli-bar:hover{
+		opacity: 1;
+	}
+	.nav-list{
+		display: none;
+		background-color: #6d6767;
+	}
 	.navbar .navli{
 		display: block;
-		border: 1px solid black;
+		border-bottom: 1px solid #333;
 		height: 35px;
 		line-height: 35px;
 		z-index: 1200;
 		/*background-color: blue;*/
 	}
-	.navbar li:first-of-type{
-		height: 62px;
-		line-height: 62px;
-	}
-	div.navli-bar{
+
+	
+	.nav-logo{
 		display: block;
 	}
 
