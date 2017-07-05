@@ -1,0 +1,27 @@
+html
+	head
+		meta(http-equiv="Content-Type",charset='utf-8')
+		title 404
+		//- 这里使用的是绝对路径 ／跟路径表示http://host:port/
+		//- 使用相对路径 在路由不匹配时，如果路由是多层的，比如／admin/list/hh
+		//- 这个时候，引用的脚本等路径会相对于／admin／list／hh定向，从而出错
+		link(rel="shortcut icon",href="/images/favicon.ico",type="image/x-icon")
+		link(rel="stylesheet", href="/css/404.css")
+		script(src="/common/jquery.min.js")
+		script(src="/common/scriptalizer.js")
+		script(src="/js/404.js")
+	body
+		div#content.narrowcolumn
+			div#parallax
+				div.error1(style="position: absolute; left: 67.1538%; margin-left: -869.642px; top: 14%; margin-top: -97.3px;")
+					img(src="/images/wand.jpg",alt="Mauer")
+				div.error2(style="position: absolute; left: 67.1538%; margin-left: -671.538px; top: 14%; margin-top: -87.5px;")
+					img(src="/images/licht.png",alt="Licht")
+				div.error3(style="position: absolute; left: 67.1538%; margin-left: -671.538px; top: 14%; margin-top: -84px;")
+					img(src="/images/halo1.png",alt="Halo1")
+				div.error4(style="position: absolute; left: 67.1538%; margin-left: -772.269px; top: 14%; margin-top: -89.6px;")
+					img(src="/images/halo2.png",alt="Halo2")
+				div.error5(style="position: absolute; left: 67.1538%; margin-left: -852.854px; top: 14%; margin-top: -96.6px;")
+					img(src="/images/batman-404.png",alt="Batcave 404")
+			div.footer-banner(style="width:728px; margin:0 auto")
+<link rel="shortcut icon" href="//static.runoob.com/images/favicon.ico" mce_href="//static.runoob.com/images/favicon.ico" type="image/x-icon">

@@ -1,0 +1,96 @@
+extends main
+
+block links
+	link(rel="stylesheet", href="../css/articles_list.css")
+block scripts
+	script(src="../js/articles_list.js")
+
+block contents
+	div.alert-style.alert.alert-success(role="alert") 文章列表
+	//- 文章列表
+	div.bs-example(data-example-id="hoverable-table")
+		table.table.table-hover
+			thead
+				tr
+					th.table-num #
+					th 标题
+					th.operation LIKES
+					th.operation PV
+					th.operation 操作
+					th.operation 操作 
+			tbody
+				//- pug 循环标签each 也可以使用原生js语法
+				each val,index in data
+					tr
+						th.table-num(scope="row")= (index+1)
+						th= val.title
+						th= val.likes
+						th= val.pv
+						th
+							a.articles-editor-a(href="/admin/editor?_id="+val._id) 编辑
+						th 
+							li.articles-delete-li(li-id=val._id)
+								| 删除
+								a(href="/admin/delete?_id="+val._id,li-a-id=val._id)
+	//- 分页
+	//- 废弃 无法解决刷新后的问题
+	//- div.page-style(aria-label="Page navigation")
+	//- 	//- ul.page-ul-style.pagination
+	//- 		//- 分页个数小于7
+	//- 		- if(pageCount && pageCount<=7)
+	//- 			li.disabled
+	//- 				a(href="#",aria-label="Previous")
+	//- 					span(aria-hidden="true") &laquo;
+	//- 			- for(var i=1;i<=pageCount;i++)
+	//- 				li
+	//- 					a(href="/admin/list?page="+i)= i
+	//- 			li.disabled
+	//- 				a(href="#",aria-label="Next")
+	//- 					span(aria-hidden="true") &raquo;
+	//- 		- else if(pageCount && pageCount>7)
+	//- 			span#totalPages #{pageCount}
+	//- 			li
+	//- 				a#prePage(href="javascript:void(0);",aria-label="Previous")
+	//- 					span(aria-hidden="true") &laquo;
+	//- 			- for(var i=1;i<=7;i++)
+	//- 				li
+	//- 					a(auto="apage" href="/admin/list?page="+i)= i
+	//- 			li
+	//- 				a#nextPage(href="javascript:void(0);",aria-label="Next")
+	//- 					span(aria-hidden="true") &raquo;
+	
+	//- 分页
+	div.page-style(aria-label="Page navigation")
+		ul.page-ul-style.pagination
+				span#totalPages #{pageCount}
+				span#curPage #{curPage}
+
+				- if(pageCount && pageCount<=5)
+					li
+						a(href="#",aria-label="Previous")
+							span(aria-hidden="true") &laquo;
+					- for(var i=1;i<=pageCount;i++)
+						li.page-mid
+							a(href="/admin/list?page="+i)= i
+					li
+						a(href="#",aria-label="Next")
+							span(aria-hidden="true") &raquo;
+				- else
+					li
+						a(href="/admin/list?page=1",aria-label="Previous")
+							span(aria-hidden="true") &laquo;
+					li.page-pre
+						a(href="#") ...
+					- for(var i=1;i<=5;i++)
+						li.page-mid
+							a(href="/admin/list?page="+i)= i
+					li.page-next
+						a(href="#") ...
+					li
+						a(href="/admin/list?page="+pageCount,aria-label="Next")
+							span(aria-hidden="true") &raquo;
+			
+
+
+		
+

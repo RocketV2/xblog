@@ -1,0 +1,61 @@
+extends main
+block titles
+	title 添加随笔
+block links
+	link(rel="stylesheet", href="/editorMD/css/editormd.min.css")
+	link(rel="stylesheet", href="/css/articles_add.css")
+block scripts
+	script(src="/common/jquery.min.js")
+	script(src="/editorMD/editormd.min.js")
+	script(src="/js/articles_add.js")
+
+block contents
+	form(action="/admin/add",method="post")
+		div.alert-style.alert.alert-success(role="alert") 添加随笔
+		div.form-content
+			//- 标题
+			div.input-group
+				span#basic-addon1.input-group-addon 标题
+				input.form-control(type="text",name="title",aria-describedby="basic-addon1")
+			//- 文章内容 使用 MarkDown 编辑器
+			div#editormd.form-text
+				textarea(name="content")
+			//- 文章标签
+			div.form-tags.panel.panel-info
+				div.panel-heading
+					span.panel-title 文章标签
+				div.panel-body
+					li
+						input(type="radio" name="tags" value="Javascript") 
+						span.tags-span Javascript
+					li
+						input(type="radio" name="tags" value="ES6") 
+						span.tags-span ES6
+					li
+						input(type="radio" name="tags" value="Webpack") 
+						span.tags-span Webpack
+					li
+						input(type="radio" name="tags" value="Nodejs") 
+						span.tags-span Nodejs
+					li
+						input(type="radio" name="tags" value="MongoDB") 
+						span.tags-span MongoDB
+					li
+						input(type="radio" name="tags" value="Project") 
+						span.tags-span 项目
+			//- 发表
+			input.btn.btn-info(type="submit")
+			div.tips
+				if error
+					div.alert.alert-warning(role="alert") 
+						span.glyphicon.glyphicon-alert &nbsp;
+						| #{error}
+				if success
+					div.alert.alert-warning(role="alert") 
+						span.glyphicon.glyphicon-alert &nbsp;
+						| #{success}
+					
+
+
+
+
