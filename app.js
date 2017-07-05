@@ -33,7 +33,7 @@ var session      = require('express-session');
 var MongoStore   = require('connect-mongo')(session);
 var flash        = require('connect-flash-plus');
 var settings     = require('./confs/db.config');
-var adminRouters = require('./routers/adminRouters');//后端路由
+var adminRouters = require('./admin/routers/adminRouters');//后端路由
 var appRouters = require('./app/routers/appRouters');// 前端路由
 var app          = express();
 
@@ -59,7 +59,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extend:false}));
 
 // 设置模板引擎
-app.set('views',['./views','app/views']);
+app.set('views',['admin/views','app/views']);
 app.set('view engine','pug');
 
 // 引入路由控制器
@@ -69,7 +69,7 @@ app.use('/',appRouters); // 前端app请求
 // 设置静态资源
 app.use(express.static('./public'));// 公共文件
 app.use('/app',express.static('./app'));// 前端界面文件
-
+app.use('/admin',express.static('./admin'));// 前端界面文件
 
 
 
