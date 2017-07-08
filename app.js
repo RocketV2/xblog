@@ -86,17 +86,6 @@ app.listen(8888,function(){
 });
 
 
-/*
-{
-	'title':'mongodb基础学习',
-	'author':'xubiao',
-	'time':
-	'tags':'mongodb',
-	'likes':22,
-	'pv':23,
-	'content':'mongodb是非关系型数据库，它的存储方式非常像json体，因而操作起来十分方便；'
-}*/
-
 /**
  * 还没有解决的问题
  * 1.日志
