@@ -45,3 +45,68 @@
 
 ## 项目结构
 
+	├── admin							#后台管理内容
+	│   ├── css
+	│   │   ├── 404.css
+	│   │   ├── articles_add.css
+	│   │   ├── articles_editor.css
+	│   │   ├── articles_list.css
+	│   │   ├── articles_status.css
+	│   │   ├── login.css
+	│   │   ├── main.css
+	│   │   ├── usersInfo.css
+	│   │   └── visitsInfo.css
+	│   ├── js
+	│   │   ├── 404.js
+	│   │   ├── articles_add.js
+	│   │   ├── articles_editor.js
+	│   │   ├── articles_list.js
+	│   │   ├── login.js
+	│   │   ├── main.js
+	│   │   ├── usersInfo.js
+	│   │   └── visitsInfo.js
+	│   ├── models
+	│   │   ├── articles.model.js
+	│   │   └── users.model.js
+	│   ├── routers
+	│   │   └── adminRouters.js          #后台管理路由
+	│   └── views
+	│       ├── 404.pug
+	│       ├── articles_add_back.pug
+	│       ├── articles_add.pug
+	│       ├── articles_editor.pug
+	│       ├── articles_list.pug
+	│       ├── articles_status.pug
+	│       ├── login.pug
+	│       ├── main.pug
+	│       ├── usersInfo.pug
+	│       └── visitsInfo.pug
+	├── app								#前端界面
+	│   ├── css
+	│   │   ├── app_index_adapt.css
+	│   │   ├── app_index.css
+	│   │   ├── app_show_list_adapt.css
+	│   │   ├── app_show_list.css
+	│   │   └── app_show_page.css
+	│   ├── js
+	│   │   ├── app_index.js
+	│   │   ├── app_show_list.js
+	│   │   └── app_show_page.js
+	│   ├── routers
+	│   │   └── appRouters.js.          #前端路由
+	│   └── views
+	│       ├── app_index.pug
+	│       ├── app_show_list.pug
+	│       └── app_show_page.pug
+	├── app.js       #程序入口
+	├── confs
+	│   ├── db.config.js #数据库配置信息
+	│   └── tips.config.js #提示字段
+	├── database
+	│   └── mongodb.js #数据库方法
+	├── LICENSE
+	├── package.json
+	├── README.md
+
+
+
