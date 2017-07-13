@@ -45,7 +45,7 @@
 
 ## 项目结构
 
-	├── admin							#后台管理内容
+	├── admin #后台管理内容
 	│   ├── css
 	│   │   ├── 404.css
 	│   │   ├── articles_add.css
@@ -69,7 +69,7 @@
 	│   │   ├── articles.model.js
 	│   │   └── users.model.js
 	│   ├── routers
-	│   │   └── adminRouters.js          #后台管理路由
+	│   │   └── adminRouters.js #后台管理路由
 	│   └── views
 	│       ├── 404.pug
 	│       ├── articles_add_back.pug
@@ -81,7 +81,7 @@
 	│       ├── main.pug
 	│       ├── usersInfo.pug
 	│       └── visitsInfo.pug
-	├── app								#前端界面
+	├── app	#前端界面
 	│   ├── css
 	│   │   ├── app_index_adapt.css
 	│   │   ├── app_index.css
@@ -93,7 +93,7 @@
 	│   │   ├── app_show_list.js
 	│   │   └── app_show_page.js
 	│   ├── routers
-	│   │   └── appRouters.js.          #前端路由
+	│   │   └── appRouters.js.  #前端路由
 	│   └── views
 	│       ├── app_index.pug
 	│       ├── app_show_list.pug
