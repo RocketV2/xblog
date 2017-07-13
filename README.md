@@ -11,7 +11,12 @@
 
 ## 项目运行
 	git clone https://github.com/RocketV2/xblog.git
-	
+
+	cd xblog
+
+	npm install 
+
+	npm run app(访问本地8888端口 http://localhost:8888)
 
 
 ## 网站地址
