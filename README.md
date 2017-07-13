@@ -10,6 +10,9 @@
 > nodejs + express + pug(jade) + mongodb + bootstrap + hightcharts + ES6
 
 ## 项目运行
+	git clone https://github.com/RocketV2/xblog.git
+	
+
 
 ## 网站地址
 > http://xblog.life
