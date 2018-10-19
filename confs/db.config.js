@@ -3,8 +3,8 @@
  * @type {Object}
  */
 module.exports = {
-	cookieSecret:'xblog',
-	db:'xblog',
-	host:'192.168.1.114',
-	port:12345
+	cookieSecret: 'xblog',
+	db: 'xblog',
+	host: '127.0.0.1',
+	port: 27017
 };
